@@ -1,0 +1,69 @@
+.jumbotron {
+  padding-top: 3rem;
+  background-color: #e2edff;
+}
+
+#home {
+  margin-top: 3rem;
+}
+
+#projects {
+  background-color: #e2edff;
+}
+
+section {
+  padding-top: 5rem;
+}
+.card-img-top {
+  object-fit: contain;
+}
+
+.object-fit {
+  width: 100%;
+  height: 358px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.img-clickable {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.img-click {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.img-clickable:hover,
+.img-click:hover {
+  transform: scale(1.1);
+}
+
+/* Atur tampilan pada bagian atas */
+#top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-out;
+}
+
+section {
+  animation: Fadein 5s;
+}
+
+@keyframes Fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
