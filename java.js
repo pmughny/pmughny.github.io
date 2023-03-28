@@ -1,3 +1,11 @@
+$(document).ready(function () {
+  // Mendapatkan nama halaman saat ini
+  var current_page = location.pathname.split('/').pop();
+
+  // Menambahkan kelas "active" pada elemen navbar yang sesuai
+  $('.nav-link[href="' + current_page + '"]').addClass('active');
+});
+
 // untuk membuat navbar hide
 $(document).ready(function () {
   var lastScrollTop = 0;
@@ -32,3 +40,22 @@ function openImage(img) {
   window.open(img.src, '_blank');
 }
 // akhir dari membuat gambar terbuka pada halaman selanjutnya
+
+// Awal Readmore
+function myFunction() {
+  var dots = document.getElementById('dots');
+  var moreText = document.getElementById('more');
+  var btnText = document.getElementById('myBtn');
+
+  if (dots.style.display === 'none') {
+    dots.style.display = 'inline';
+    btnText.innerHTML = 'Read more';
+    moreText.style.display = 'none';
+  } else {
+    dots.style.display = 'none';
+    btnText.innerHTML = 'Read less';
+    moreText.style.display = 'inline';
+  }
+}
+
+// Akhir Readmore

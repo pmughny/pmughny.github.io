@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">Beranda</a>
+              <a class="nav-link" href="#home">Beranda</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">Pengalaman</a>
@@ -41,7 +41,7 @@
 
     <!-- Jumbotron -->
     <section id="home" class="jumbotron text-center">
-      <img src="image/NDA.jpg" alt="" width="200" class="img-thumbnail rounded-circle" />
+      <img src="image/NDA.jpg" alt="" width="200" class="img-thumbnail img-click rounded-circle" onclick="openImage(this)" />
       <h1 class="display-4">Nanda Mughny Saputra</h1>
       <div class="container">
         <p class="lead">
@@ -64,22 +64,29 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col mb-3">
-            <h1><b>Pengalaman</b></h1>
+            <h1 class="mb-4"><b>Pengalaman</b></h1>
           </div>
         </div>
-        <div class="row justify-content-between fs-5 text-center">
+        <div class="row justify-content-between fs-5">
           <div class="col-md-6">
             <h2><b>PT Java Kor Nusantara</b></h2>
             <h4>Agustus 2022 - Januari 2023</h4>
             <h4>Helper</h4>
             <p>Membantu semua aktivitas produksi,sehingga meningkatkan produktivitas pabrik sebesar 15% dengan melebihi target produksi</p>
-            <img src="image/Javakor.jpg" alt="Javakor" class="container img-click" onclick="openImage(this)" />
           </div>
           <div class="col-md-6">
-            <h2><b>PT Kinenta Indonesia</b></h2>
-            <h4>September 2017 - Oktober 2021</h4>
-            <h4>Operator</h4>
-            <p>Mengoperasikan mesin untuk membuat sebuah wire sesuai keterangan WOS(Work Order Sheet).</p>
+            <img src="image/Javakor.jpg" alt="Javakor" class="container img-click pb-4" onclick="openImage(this)" />
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="mt-4"><b>PT Kinenta Indonesia</b></h2>
+              <h4>September 2017 - Oktober 2021</h4>
+              <h4>Operator</h4>
+              <p>Mengoperasikan mesin untuk membuat sebuah wire sesuai keterangan WOS(Work Order Sheet).</p>
+            </div>
+            <div class="col-md-6">
+              <img src="image/TIF.jpg" alt="Javakor" class="container img-click pb-4" onclick="openImage(this)" />
+            </div>
           </div>
         </div>
       </div>
@@ -97,12 +104,12 @@
       <div class="container">
         <div class="row text-center">
           <div class="col mb-3">
-            <h1><b>Projek</b></h1>
+            <h1 class="mb-4"><b>Projek</b></h1>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4 mb-2">
-            <div class="card" style="">
+            <div class="card shadow h-100" style="">
               <img src="image/mybio-1.jpg" class="card-img-top object-fit img-clickable" alt="Project 1" onclick="openImage(this)" />
               <div class="card-body">
                 <p class="card-text">Website pertama menggunakan bahasa pemograman HTML,CSS dengan bantuan framework bootstrap 4. memiliki tampilan yang minimalis,hanya berupa gambar dan text. Berisikan tentang biodata diri.</p>
@@ -110,7 +117,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-2">
-            <div class="card" style="">
+            <div class="card shadow h-100" style="">
               <img src="image/portfolio-1.jpg" class="card-img-top object-fit img-clickable" alt="Project 2" onclick="openImage(this)" />
               <div class="card-body">
                 <p class="card-text">
@@ -121,12 +128,14 @@
             </div>
           </div>
           <div class="col-md-4 mb-2">
-            <div class="card" style="">
+            <div class="card shadow h-100" style="">
               <img src="image/portfolio-2.jpg" class="card-img-top object-fit img-clickable" alt="Project 3" onclick="openImage(this)" />
               <div class="card-body">
                 <p class="card-text">
                   Website ketiga menggunakan bahasa pemograman HTML,CSS,JavaScript dengan bantuan framework tailwind. Pada website ini saya mengambil contoh dari youtube tutorial unpas programming,yakni dari seorang dosen UNPAS yaitu Bapa
-                  Sandhika Galih. Menjadi pengalaman pertama saya menggunakan framework ini dikarenakan framework ini kurang cocok bagi saya yang pemula,karna banyak komponen yang harus kalian ubah maupun tambahkan.
+                  Sandhika <span id="dots">...</span>
+                  <span id="more"> Galih. Menjadi pengalaman pertama saya menggunakan framework ini dikarenakan framework ini kurang cocok bagi saya yang pemula,karna banyak komponen yang harus kalian ubah maupun tambahkan.</span>
+                  <button onclick="myFunction()" id="myBtn">Read more</button>
                 </p>
               </div>
             </div>
@@ -147,7 +156,7 @@
     <section id="kontak">
       <div class="container">
         <div class="row text-center mb-3">
-          <div class="col">
+          <div class="col mb-4">
             <h1><b>Kontak</b></h1>
           </div>
         </div>
